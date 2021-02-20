@@ -1,0 +1,14 @@
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+    /* IE10+ CSS here */
+
+}
+
+/* Internet Explorer 11+ */
+_:-ms-fullscreen, :root .selector {
+
+}
+
+/* Internet Explorer 10+ */
+_:-ms-lang(x), .selector { /* Нужные стили */ }

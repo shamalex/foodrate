@@ -1,0 +1,102 @@
+/*========================================================
+ *   @file:          variables.scss
+ *   @description:   custom styles
+ *   @author:        Alex Shamshin
+ *   @contact:       shamshin.alexandr@gmail.com
+ *   @company:       foodrate
+ *   @date:          30.01.2021
+=========================================================*/
+
+//Colors
+$white: white;
+$black: black;
+$dark: #414549;
+$dark-light: #717579;
+$dark-mid: #A1A3A5;
+$dark-mid2: #D1D5D9;
+$light: #E1E5E9;
+$light2: #F1F3F5;
+$bg: #E5E5E5;
+$red: #A81825;
+$gray: #F1F3F5;
+$green:#44BB00;
+$hover: #63B7F2;
+$orange: #FF9900;
+$green-grad: linear-gradient(90deg, #22BB00 0%, #66BB00 100%);
+
+$font-color: #c4c4c4;
+
+$base-color: $dark;
+$font-color: $dark;
+$font-color-light: $white;
+$font-header: $white;
+$accent-color: #2b2e4a;
+$link-color: $base-color;
+
+$img_path: '../img';
+
+//Typography
+$fontE: 'PT Root UI Web', sans-serif;
+$font-size: 16px;
+$line-height: $font-size * 1.6;
+
+$w-light: 300;
+$w-normal: 400;
+$w-medium: 500;
+$w-semibold: 600;
+$w-bold: bold;
+
+// Breakpoints for each query
+$breakpoints: (
+  'xs':0px,
+  'xs375':375px,
+  'iphone7': 414px,
+  'sm576': 576px,
+  'small':  767px,
+  'medium': 960px,
+  'landscape': 1024px,
+  'large':  1230px,
+  'xxl':  1919px,
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 1024px,
+  lg: 1231px
+) !default;
+
+$container-max-widths: (
+  sm: 768px,
+  md: 892px,
+  lg: 1140px
+) !default;
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+// $grid-columns:                8 !default;
+// $grid-gutter-width:           40px !default;
+// $grid-row-columns:            6 !default;

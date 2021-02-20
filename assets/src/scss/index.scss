@@ -1,0 +1,492 @@
+/* ==========================================================================
+ *   @file:          index.scss
+ *   @description:   site styles
+ *   @author:        Alex Shamshin
+ *   @contact:       shamshin.alexandr@gmail.com
+ *   @company:       food
+ *   @date:          29.01.2021
+========================================================================== */
+
+
+/* ==========================================================================
+    header
+========================================================================== */
+.header {
+    &__top {
+        background-color: $dark;
+
+        display: flex;
+        align-items: center;
+        @include respond-to('large') {
+            height: 36px;
+        }
+        &-city {
+            svg {
+                margin-right: 5px;
+            }
+        }
+        .dropdown {
+            a {
+                &.dropdown-item {
+                    color: $dark;
+                }
+            }
+        }
+        a {
+            color: $white;
+            font-size: 12px;
+            line-height: 20px;
+            svg, use {
+                stroke: $white;
+                stroke-width: 1.5px;
+            }
+        }
+        &-user {
+            &-actions {
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+                padding-bottom: 10px;
+                @include respond-to('large') {
+                    margin-top: 0;
+                    padding-bottom: 0;
+                }
+                & > a {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    svg, use {
+        fill: none;
+    }
+    &__bottom {
+        margin-top: 2.3rem;
+        nav {
+            li {
+                margin-bottom: 20px;
+            }
+            a {
+                font-weight: 500;
+                font-size: 22px;
+                line-height: 32px;
+                margin-left: 0;
+                transition: color .3s;
+                @include respond-to('large') {
+                    font-size: 14px;
+                    line-height: 20px;
+                    margin-left: 2rem;
+                }
+                &.search {
+                    svg {
+                        stroke: $dark;
+                    }
+                }
+                &.active {
+                    color: $green;
+                }
+                &:hover {
+                    color: $green;
+                    path {
+                        stroke: $green;
+                    }
+                }
+                path {
+                    stroke: $dark;
+                }
+            }
+        }
+    }
+}
+
+/* ==========================================================================
+    main
+========================================================================== */
+
+
+.mainbanner {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    @include respond-to('large') {
+        margin-top: 0;
+    }
+    h1 {
+        margin-bottom: 1.3rem;
+    }
+    p {
+        margin-bottom: 1.6rem;
+        font-size: 18px;
+        line-height: 32px;
+    }
+    .container {
+        & > div {
+            background: $light2;
+            border-radius: 0px 16px 120px 0px;
+            min-height: 320px;
+            position: relative;
+            @include respond-to('large') {
+                margin-top: 5rem;
+            }
+            div {
+                position: relative;
+                z-index: 1;
+            }
+            &:after {
+                content: '';
+                background: url(../img/mainbanner_bg.png) 0 -40px no-repeat;
+                display: block;
+                width: 100%;
+                height: 400px;
+                position: absolute;
+            }
+            &:before {
+                content: '';
+                background: $light2;
+                display: block;
+                width: 100%;
+                height: 320px;
+                left: -100%;
+                margin-right: 50%;
+                position: absolute;
+            }
+        }
+    }
+}
+
+//slider top
+.slider-top {
+    opacity: 0;
+    margin: 0 -15px;
+    a {
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        min-height: 200px;
+        border-radius: 8px;
+        padding: 20px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .slick-slide {
+        margin: 15px;
+    }
+    h3 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    p {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 20%;
+    }
+    span {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        color: #44BB00;
+    }
+}
+
+//personal diet container
+.personal-diet {
+    border-radius: 16px;
+    padding: 20px;
+    &-choose {
+        border-radius: 12px;
+        background-color: $light2;
+        padding: 10px;
+        min-height: 60px;
+        margin-bottom: 13px;
+        @include respond-to('large') {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .dropdown {
+            width: 100%;
+            min-height: 36px;
+            display: flex;
+            padding: 0 15px;
+            margin-right: 5px;
+            @include respond-to('large') {
+                border-right: 1px solid $dark-mid2;
+            }
+            .btn-drop {
+                position: relative;
+                width: 100%;
+                &:after {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+            &.show {
+                .btn-drop {
+                    &:after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        svg, use {
+            fill: none;
+        }
+        & > a {
+            min-width: 100%;
+            margin-top: 20px;
+            @include respond-to('large') {
+                min-width: 114px;
+                margin-top: 0;
+            }
+            svg {
+                fill: $white;
+                stroke: $white !important;
+            }
+        }
+    }
+    &-tags {
+        button {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            @include respond-to('large') {
+                margin-bottom: 0;
+            }
+        }
+        svg {
+            stroke: $white;
+        }
+    }
+}
+
+//tabs container
+.nav-tabs {
+    border-bottom: 1px solid $light;
+    .nav-link {
+        border: none;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: $dark-mid;
+        padding: 0 0 20px 0;
+        margin-right: 24px;
+        &.active {
+            color: $dark;
+            background-color: transparent;
+            border-bottom: 3px solid $green;
+        }
+    }
+}
+
+//cards
+.card {
+    background: $white;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08%);
+    border-radius: 16px;
+    border: none;
+    padding: 20px;
+    margin-bottom: 40px;
+    &.card-inline {
+        padding: 16px;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        color: #414549;
+        border-bottom: 1px solid $light;
+        padding-bottom: 11px;
+        margin-bottom: 12px;
+    }
+    &__rate {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 16px;
+        min-width: 135px;
+        div {
+            color: $dark;
+            & + div {
+                color: $dark-light;
+            }
+        }
+    }
+    &__image {
+        box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 6px;
+        img {
+            width: 100%;
+        }
+        & > div {
+            position: absolute;
+            top: 67%;
+            display: flex;
+            left: 10px;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 28px;
+                height: 28px;
+                background: $white;
+                box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+                border-radius: 4px;
+                margin-right: 10px;
+                transition: background .3s;
+                &:hover {
+                    background: rgba(255, 255, 255, 0.8);
+                }
+            }
+        }
+    }
+    &__detail {
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            line-height: 20px;
+            margin: 11px 0px 12px;
+            span {
+                &:first-child {
+                    color: $dark-mid;
+                }
+                &:last-child {
+                    color: $dark;
+                }
+                &.card__detail-title {
+                    &:first-child {
+                        font-size: 12px;
+                        color: $dark-mid;
+                    }
+                    &:last-child {
+                        font-size: 12px;
+                        color: $dark-mid;
+                    }
+                }
+            }
+        }
+        &-days {
+            display: flex;
+            align-items: center;
+            a {
+                text-decoration: none;
+                outline: none;
+                font-size: 12px;
+                line-height: 20px;
+                background-color: $light2;
+                border-radius: 4px;
+                margin-left: 6px;
+                min-width: 20px;
+                padding: 0 3px;
+                text-align: center;
+                transition: background;
+                &.active {
+                    background: linear-gradient(90deg, #22BB00 0%, #66BB00 100%);
+                    box-shadow: 0px 4px 8px rgba(68, 187, 0, 0.5);
+                    color: $white;
+                }
+                &:hover {
+                    background: linear-gradient(90deg, #22BB00 0%, #66BB00 100%);
+                    box-shadow: 0px 4px 8px rgba(68, 187, 0, 0.5);
+                    color: $white;
+                }
+            }
+        }
+    }
+    &__cart {
+        border-top: 1px solid $light;
+        padding-top: 15px;
+        margin-top: 3px;
+        svg, use {
+            fill: none;
+            stroke-width: 1.5px;
+        }
+    }
+}
+
+footer {
+    background-color: $dark;
+    color: $white;
+    a {
+        color: $white;
+    }
+    p {
+        font-size: 14px;
+        line-height: 20px;
+        color: $dark-mid;
+    }
+    .footer {
+        &__links {
+            a {
+                display: block;
+                margin-bottom: 10px;
+                &:hover {
+                    color: $white;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    .socials {
+        p {
+            color: $white;
+            margin-bottom: 10px;
+        }
+        margin-top: 75px;
+    }
+}
+
+//slick styles
+.slick-loading .slick-list {
+    background: none;
+}
+.slick-next{
+    right: -8px;
+    &::before {
+        transform: rotate(180deg);
+    }
+}
+.slick-prev {
+    left: -8px;
+}
+.slick-next, .slick-prev {
+    background: $white;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    z-index: 1;
+    width: 44px;
+    height: 44px;
+    transition: box-shadow .3s;
+    &:before {
+        content: '';
+        background: url('../img/svg/icon-slider-arrow-left.svg') no-repeat center;
+        width: 20px;
+        height: 20px;
+        display: block;
+        margin: 0 auto;
+    }
+    &:hover, &:active, &:focus {
+        background: $white;
+        box-shadow: none;
+    }
+}
+
+.divider-vertical {
+    width: 1px;
+    height: 100%;
+    display: block;
+    background-color: #717579;
+    margin: 0 10px;
+    min-height: 20px;
+    position: relative;
+}
+
+.shadow-md {
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08);
+}

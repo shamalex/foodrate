@@ -1,0 +1,140 @@
+.btn-drop {
+    display: flex;
+    align-items: center;
+    svg {
+        margin-right: 15px;
+    }
+    &:after {
+        content: '';
+        border: none;
+        background: url('../img/svg/icon-usermenu-arrow-down.svg');
+        width: 8px;
+        height: 6px;
+        display: inline-block;
+        margin-left: 5px;
+    }
+}
+
+.btn-big {
+    background: linear-gradient(90deg, #22BB00 0%, #66BB00 100%);
+    box-shadow: 0px 8px 24px rgba(102, 204, 0, 0.5);
+    border-radius: 8px;
+    min-height: 52px;
+    min-width: 52px;
+    min-width: 226px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+    color: $white;
+    transition: box-shadow .3s;
+    outline-style: none;
+    border: none;
+    padding: 0 20px;
+    svg {
+        margin-right: 5px;
+    }
+    &:hover {
+        box-shadow: none;
+        color: $white;
+    }
+    &:focus, &:active {
+        outline-style: none;
+    }
+}
+
+.btn-medium {
+    background: linear-gradient(90deg, #22BB00 0%, #66BB00 100%);
+    box-shadow: 0px 8px 24px rgba(102, 204, 0, 0.5);
+    border-radius: 8px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    min-width: 44px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 28px;
+    color: $white;
+    transition: box-shadow .3s;
+    outline-style: none;
+    border: none;
+    svg {
+        margin-right: 5px;
+    }
+    &:hover {
+        box-shadow: none;
+        color: $white;
+    }
+    &.gray {
+        background: $light2;
+        color: $dark;
+        stroke: $dark;
+        transition: background .3s;
+        box-shadow: none;
+        &:hover {
+            background: $light;
+        }
+    }
+    &:focus, &:active {
+        outline-style: none;
+    }
+}
+
+.btn-small {
+    background: linear-gradient(90deg, #22BB00 0%, #66BB00 100%);
+    box-shadow: 0px 8px 24px rgba(102, 204, 0, 0.5);
+    border-radius: 4px;
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    min-width: 44px;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 15px;
+    color: $white;
+    transition: box-shadow .3s;
+    outline-style: none;
+    border: none;
+    &.orange {
+        background: $orange;
+        box-shadow: none;
+        border: 1px solid $white;
+        &:hover {
+            border-color: $orange;
+        }
+    }
+    svg {
+        margin-left: 5px;
+    }
+    &:hover {
+        box-shadow: none;
+        color: $white;
+    }
+    &:focus, &:active {
+        outline-style: none;
+    }
+}
+
+.btn-outline-secondary {
+    color: $dark;
+    border-color: #E1E5E9;
+    min-height: 28px;
+    min-width: 44px;
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 4px;
+    &:focus, &:active {
+        outline-style: none;
+    }
+}
