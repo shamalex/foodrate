@@ -637,6 +637,32 @@ footer {
     h1, h2, h3, h4 {
         color: $font-color;
     }
+    .dropdown-menu {
+        text-align: left;
+        padding: 20px;
+        list-style: none;
+        background-color: $white;
+        background-clip: padding-box;
+        border: none;
+        min-width: 200px;
+        box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.16%);
+        border-radius: 16px;
+        .dropdown-item {
+            color: $dark;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 0;
+            margin-bottom: 12px;
+            &:hover {
+                background: transparent;
+                color: $orange;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {

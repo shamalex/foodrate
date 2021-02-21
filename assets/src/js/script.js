@@ -68,3 +68,7 @@ function myTabClicks(tabClickEvent) {
 for (var i = 0; i < myTabs.length; i++) {
     myTabs[i].addEventListener("click", myTabClicks)
 }
+
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })

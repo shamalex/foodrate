@@ -25,13 +25,6 @@
                 margin-right: 5px;
             }
         }
-        .dropdown {
-            a {
-                &.dropdown-item {
-                    color: $dark;
-                }
-            }
-        }
         a {
             color: $white;
             font-size: 12px;
@@ -489,4 +482,22 @@ footer {
 
 .shadow-md {
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.08);
+}
+
+.tooltip-inner {
+    max-width: 388px;
+    padding: 6.5px 12px;
+    color: $white;
+    text-align: center;
+    background-color: $dark;
+    border: 1px solid $white;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.tooltip.show {
+    opacity: 1;
+}
+.tooltip .arrow {
+    display: none;
 }
