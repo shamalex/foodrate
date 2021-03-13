@@ -27,6 +27,11 @@ html {
 
 body {
     margin: 0;
+    &.search {
+        overflow: hidden;
+    }
+    position: relative;
+    height: 100%;
 }
 
 /**

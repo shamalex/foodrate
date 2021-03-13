@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Foodrate</title>
+
+    <!--[if IE]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="css/vendors.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <main>
+            <!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
+            <section class="auth">
+                <a class="navbar-brand" href="#">
+                    <img src="img/svg/logo.svg" alt="logo">
+                </a>
+                <nav>
+                    <div class="nav nav-tabs nav-buttons mb-5" id="nav-tab" role="tablist">
+                        <a
+                            class="nav-item nav-link active"
+                            id="nav-singup-tab"
+                            data-toggle="tab"
+                            href="#nav-singup"
+                            role="tab"
+                            aria-controls="nav-singup"
+                            aria-selected="true"
+                        >Регистрация</a>
+                        <a
+                            class="nav-item nav-link"
+                            id="nav-singin-tab"
+                            data-toggle="tab"
+                            href="#nav-singin"
+                            role="tab"
+                            aria-controls="nav-singin"
+                            aria-selected="false"
+                        >Вход</a>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-singup" role="tabpanel" aria-labelledby="nav-singup-tab">
+                        <form action="">
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="input-group">
+                                <label for="password">Пароль</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <div class="input-group">
+                                <label for="repeatpassword">Повторите пароль</label>
+                                <input type="repeatpassword" class="form-control">
+                            </div>
+                            <button class="btn btn-medium mb-5 mt-2 w-100" type="submit">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="nav-singin" role="tabpanel" aria-labelledby="nav-singin-tab">
+                        <form action="">
+                            <div class="input-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control">
+                            </div>
+                            <div class="input-group">
+                                <label for="password">Пароль</label>
+                                <input type="password" class="form-control">
+                            </div>
+                            <button class="btn btn-medium mb-5 mt-2 w-100" type="submit">Войти</button>
+                            <a href="#" class="text-center forgot-link d-block">Забыли пароль?</a>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="auth-socials text-center">
+                    <p class="mb-3">или продолжить через соцсети</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="#!" class="mr-2">
+                            <img src="img/svg/icon-inst.svg" alt="inst">
+                        </a>
+                        <a href="#!" class="mr-2">
+                            <svg width="28" height="28" class="svg-icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="img/sprite-svg.svg#icon-fb"></use>
+                            </svg>
+                        </a>
+                        <a href="#!" class="mr-2">
+                            <svg width="28" height="28" class="svg-icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="img/sprite-svg.svg#icon-vk"></use>
+                            </svg>
+                        </a>
+                        <a href="#!" class="mr-2">
+                            <svg width="28" height="28" class="svg-icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xlink:href="img/sprite-svg.svg#icon-tg"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+            <p class="copyrights">Registering to this website, you accept our <a href="#">Terms</a> of Use and our <a href="#">Privacy Policy</a></p>
+        </main>
+    </div>
+    <!-- wrapper -->
+    <script src="js/vendors.min.js"></script>
+    <script src="js/script.min.js"></script>
+    <style>
+        @media (min-width: 992px) {
+            main {
+                background: url(/img/login_bg.webp) left top no-repeat;
+                display: block;
+                width: 100%;
+                left: 0;
+                top: 0;
+                min-width: 1000px;
+                min-height: 1000px;
+            }
+        }
+    </style>
+</body>
+</html>

@@ -136,11 +136,37 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
     border-radius: 4px;
     &:focus, &:active {
         outline-style: none;
+    }
+}
+
+.btn-orange {
+    background: $orange;
+    box-shadow: 0px 4px 8px rgba(255, 153, 0, 0.5);
+    border-radius: 4px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration: none;
+    outline: none;
+    color: $white;
+    padding: 6px 10px;
+    border: none;
+    transition: all .3s;
+    &:focus, &:active {
+        outline-style: none;
+    }
+    &:hover {
+        box-shadow: none;
+        color: $white;
     }
 }

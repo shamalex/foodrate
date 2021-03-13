@@ -21,7 +21,39 @@
                     </a>
                     <div class="divider-vertical"></div>
                     <div>
-                        <div class="dropdown show">
+                        <div class="header__top-login">
+                            <div class="d-flex align-items-center">
+                                <a class="btn-link" href="#">
+                                    <svg width="16" height="16" class="svg-icon">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-log-in"></use>
+                                    </svg> Вход / Регистрация
+                                </a>
+                                <span>или</span>
+                                <div class="d-flex">
+                                    <a href="#!" data-toggle="tooltip" title="Вход через социальную сеть">
+                                        <svg width="24" height="24" class="svg-icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-log-vk"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#!" data-toggle="tooltip" title="Вход через социальную сеть">
+                                        <svg width="24" height="24" class="svg-icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-log-fb"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#!" data-toggle="tooltip" title="Вход через социальную сеть">
+                                        <svg width="24" height="24" class="svg-icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-log-ig"></use>
+                                        </svg>
+                                    </a>
+                                    <a href="#!" data-toggle="tooltip" title="Вход через социальную сеть">
+                                        <svg width="24" height="24" class="svg-icon">
+                                            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-log-ya"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="dropdown show">
                             <a class="btn-drop dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <svg width="16" height="16" class="svg-icon">
                                     <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-user"></use>
@@ -33,7 +65,7 @@
                                 <a class="dropdown-item" href="#">Пункт 2</a>
                                 <a class="dropdown-item" href="#">Пункт 3</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -67,7 +99,7 @@
                             <a href="#!">Статьи и обзоры</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#!" class="search">
+                            <a href="#!" class="search js-search">
                             <svg width="16" height="16" class="svg-icon">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-search"></use>
                             </svg>
@@ -88,13 +120,29 @@
                         <a href="#!">Рационы</a>
                         <a href="#!">Средства для похудения</a>
                         <a href="#!">Статьи и обзоры</a>
-                        <a href="#!" class="search">
+                        <a href="#!" class="search js-search">
                             <svg width="16" height="16" class="svg-icon">
                                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-search"></use>
                             </svg>
                         </a>
                     </nav>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-modal">
+        <div class="container position-relative">
+            <form action="">
+                <input type="text" placeholder="Поиск...">
+            </form>
+            <a href="#" class="js-search-close search-close">
+                <svg width="45" height="45" class="svg-icon">
+                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#icon-close-search"></use>
+                </svg>
+            </a>
+            <div class="search__result">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@ const browserSync = require('browser-sync').create();
 
 const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
-const imagemin = require('gulp-imagemin');
+const webp = require('gulp-webp');
 
 const paths =  {
   src: './assets/src/',              // paths.src
@@ -131,7 +131,7 @@ function htmls() {
 
 function images() {
   return gulp.src(paths.src + 'img/**/*.{jpg,jpeg,png,gif,svg}')
-    .pipe(imagemin()) // если картинок будет много, то и времени будет уходить много
+    .pipe(webp()) // если картинок будет много, то и времени будет уходить много
     .pipe(gulp.dest(paths.build + 'img/'));
 }
 function fonts() {
